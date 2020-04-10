@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>chatterbox</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <bootstrap>
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <!-- Popper JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <!-- Latest compiled JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </bootstrap>
+  </head>
+  <body>
+    <div class="container text-center">
+      <h1 class="bg-light py-5 rounded" id="title">My-Chatter-Box</h1>
+    </div>
+
+    <div id="tab" class="jumbotron">
+      <span style="display: inline;" id="select-room">
+        <label for="select-room">
+          <h6>방을 선택하세요</h6>
+        </label>
+        <!-- <select class="btn btn-block btn-primary py-2" style="display: block; font-size:small" id="select-room">
+        </select> -->
+      </span>
+
+      <span style="display: none;" id="create-room">
+        <div class="form-group">
+          <label for="create-room">
+            <h6>방이름을 정해주세요</h6>
+          </label>
+          <input id="create-room" class="form-control">
+        </div>
+        <div class="row">
+          <div class="col">
+            <button class="btn btn-block btn-primary" id="create-room">Create</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-block btn-secondary" id="cancel-create-room">Cancel</button>
+          </div>
+        </div>
+      </span>
+    </div>
+
+    <div class="jumbotron">
+      <div class="form-group">
+        <label for="name">
+          <h6>이름</h6>
+        </label>
+        <br><input id="name" class="form-control"></input>
+      </div>
+
+      <div class="form-group">
+        <label for="write">
+          <h6>내용</h6>
+        </label>
+        <textarea id="write" class="form-control"></textarea>
+      </div>
+
+      <div class="block center-content">
+        <button class="btn btn-primary btn-block" type="button" id="submit">Submit</button>
+      </div>
+
+      </input>
+    </div>
+
+    <!-- #chats 엘리먼트의 id는 바꾸지 마세요 -->
+    <div class="jumbotron" id="chats">
+      <!-- 자유롭게 HTML을 작성하세요 -->
+    </div>
+
+
+    <template id="message">
+      <div class="container rounded py-2 my-2 bg-light message">
+        <div>
+          <span class="message-username">userName</span>
+          <span class="message-date">date</span>
+        </div>
+        <div class="message-content">
+          content
+        </div>
+      </div>
+    </template>
+
+    <script src="scripts/buttonGroup.js"></script>
+    <script src="scripts/dropdown.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
