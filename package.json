@@ -8,9 +8,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "mocha __test__/test.mocha.js",
-    "precommit": "lint-staged",
-    "lint": "eslint client/scripts/app.js"
+    "start": "node index",
+    "develop": "nodemon index"
   },
   "lint-staged": {
     "linters": {
