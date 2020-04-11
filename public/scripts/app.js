@@ -88,9 +88,9 @@ const app = {
         "Content-Type" : "application/json",
       }
     }).then((response) => {
-      return response.json();
-    }).then((json) => {
-      app.findMsg(json.id);
+      return response.text();
+    }).then((id) => {
+      app.findMsg(id);
       let nameBox = document.querySelector('input#name');
       let textBox = document.querySelector('textarea#write');
       nameBox.value = '';
