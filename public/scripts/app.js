@@ -37,7 +37,7 @@ const app = {
       app.roomDropdown.addOption('전체보기', 'click', (option) => {
         option.addEventListener('click', app.changeRoom(option.textContent))
       });
-      console.log(app.tempData);
+
       Object.keys(app.tempData)
       .sort((front, rear) => front[0].charCodeAt() - rear[0].charCodeAt())
       .forEach((roomName) => {
