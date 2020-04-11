@@ -22,6 +22,7 @@ const app = {
 
     this.fetch()
     .then((msgArr) => {
+      console.log(msgArr);
       msgArr.forEach((msg) => {
         if (!app.tempData[msg.roomname]) {
           app.tempData[msg.roomname] = [];
