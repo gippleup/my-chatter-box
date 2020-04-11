@@ -13,7 +13,7 @@ Date.prototype.koreanDate = function() {
 
 // eslint-disable-next-line
 const app = {
-  server: "http://127.0.0.1:3000/messages",
+  server: "https://xidius-server.herokuapp.com/messages",
   // server: "http://52.78.206.149:3000/messages",
   // eslint-disable-next-line no-undef
   roomDropdown: new Dropdown('전체보기', 'select-room'),
@@ -121,7 +121,7 @@ const app = {
     let dateEle = messageEle.querySelector('.message-date');
     userNameEle.textContent = message.username;
     if (message.date !== undefined) {
-      dateEle.textContent = new Date(message.date).koreanDate();
+      dateEle.textContent = new Date(message.date._seconds * 1000).koreanDate();
     } else {
       dateEle.textContent = '';
     }
